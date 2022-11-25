@@ -1,0 +1,19 @@
+{{ block title }}
+Round {{subsession.round_number}}
+{{C.NUM_ROUNDS}} rounds in total.
+
+{{ endblock }}
+{{ block content }}
+
+    <p>
+        Please choose between the two tickets:
+    </p>
+
+    <p> A. You will get <b>{{subsession.pay_d}}</b> Yuan with probability p, where p is large than <b> {{subsession.prob_win_d_min}} </b> but smaller than <b>{{subsession.prob_win_d_max}}</b>. You will get 0 with probability 1-p.</p>
+    <p> B. You will get <b>{{subsession.pay_p}}</b> Yuan with probability p, where p is large than <b> {{subsession.prob_win_p_min}} </b> but smaller than <b>{{subsession.prob_win_p_max}}</b>. You will get 0 with probability 1-p.</p>
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}

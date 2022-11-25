@@ -1,0 +1,33 @@
+{{ block title }}Result{{ endblock }}
+{{ block content }}
+<table class="table">
+    <tr>
+
+        <th> Your Valuation </th>
+
+        <th> Market Price </th>
+
+        <th> Your Payoff </th>
+
+    </tr>
+
+        <tr>
+
+
+            <td> {{ player.valuation }} </td>
+
+            <td> {{ subsession.market_price }} </td>
+
+            <td> {{ player.payoff1 }} </td>
+
+
+        </tr>
+
+</table>
+
+<br/>
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}

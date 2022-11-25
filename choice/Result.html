@@ -1,0 +1,29 @@
+{{ block title }}Result{{ endblock }}
+{{ block content }}
+<table class="table">
+    <tr>
+
+         <th> Your Choice </th>
+
+        <th> Your Payoff </th>
+
+    </tr>
+
+        <tr>
+
+
+            <td> {{ player.get_choice_display }} </td>
+
+            <td> {{ player.payoff1 }} </td>
+
+
+        </tr>
+
+</table>
+
+<br/>
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}

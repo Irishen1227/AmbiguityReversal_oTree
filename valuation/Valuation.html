@@ -1,0 +1,22 @@
+{{ block title }}
+Round {{subsession.round_number}}
+{{C.NUM_ROUNDS}} rounds in total.
+{{ endblock }}
+{{ block content }}
+
+    <p>
+    Please give the minimum price you are willing to sell the ticket.
+    </p>
+
+    <p>If your price > market price, you could not sell this ticket. You play the ticket and get the payoff.</p>
+    <p>If your price ≤ market price, you will sell this ticket and get market price.</p>
+
+    <p>Ticket:</p>
+    <p>You will get <b>{{subsession.win_pay}}</b> Yuan with probability p, where p is large than <b> {{subsession.prob_win_min}} </b> but smaller than <b>{{subsession.prob_win_max}}</b>. You will get 0 with probability 1-p.</p>
+    <p>Market price is random picked between 0 and {{subsession.win_pay}}</p>
+
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}
